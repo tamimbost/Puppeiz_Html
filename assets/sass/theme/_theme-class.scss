@@ -1,0 +1,67 @@
+// Start Custom Container 
+.tj__container{
+  max-width: 1220px;
+  margin: 0 auto;
+}
+.tj__container-2{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+// End Custom Container
+
+// Start Title Style 1
+.tj__title-style-1{
+  .tj__sub-title{
+    font-size: var(--tj__fs-heading-min-1);
+    line-height: 26px;
+    font-weight: var(--tj__fw-medium);
+    text-transform: uppercase;
+    margin-left: 7px;
+    margin-bottom: 14px;
+    &__left-icon{
+      @include tj__common-position-relative;
+      left: -7px;
+      top: -3px;
+    }
+    &__right-icon{
+      @include tj__common-position-relative;
+      right: -7px;
+      top: -3px;
+    }
+  }
+  .tj__title{
+    font-size: var(--tj__fs-h2);
+    line-height: var(--tj__lg-h2);
+    font-weight: var(--tj__fw-sbold);
+    text-transform: capitalize;
+    @include tj__screen-991{
+      font-size: 38px;
+      line-height: 48px;
+    }
+  }
+}
+// End Title Style 1
+
+// Start Custom Color Class
+.tj__orange-color{
+  color: var(--tj__theme-primary-color);
+}
+.tj__msu-green-color{
+  color: var(--tj__theme-msu-green);
+}
+.tj__white-color{
+  color: var(--tj__primary-color);
+}
+.tj__gray-color{
+  color: var(--tj__theme-gray);
+}
+.tj__green-color{
+  color: var(--tj__theme-secondary-color);
+}
+.tj__onyx-color{
+  color: var(--tj__theme-onyx);
+}
+.tj__varpire-black-color{
+  color: var(--tj__theme-varpire-black);
+}
+// End Custom Color Class

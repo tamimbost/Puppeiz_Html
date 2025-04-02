@@ -1,0 +1,153 @@
+// Start Product Details
+.tj__product-details-area{
+    @include tj__common-position-relative;
+    &__wrapper{
+        @include tj__flex-items-center;
+        gap: 80px;
+        @include tj__screen-1299{
+            gap: 40px;
+        }
+        @include tj__screen-991{
+            display: block;
+        }
+        .tj__product-details-area__img-item{
+            overflow: hidden;
+            @include tj__common-position-relative;
+            background-color: var(--tj__theme-crime);
+            padding: 95px 100px;
+            cursor: crosshair;
+            img{
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @include tj__screen-1299{
+                width: 100%;
+                padding: 50px 40px;
+            }
+            @include tj__screen-991{
+                padding: 30px 20px;
+                margin-bottom: 40px;
+            }
+        }
+        .tj__product-details-area__wrapper__text-content{
+            &__price{
+                margin-bottom: 10px;
+            }
+            &__product-name{
+                margin-bottom: 17px;
+            }
+            &__discription{
+                margin-top: 30px;
+                @include tj__screen-1299{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            .tj__product-stock{
+                margin-top: 28px;
+                @include tj__flex-items-center;
+                justify-content: start;
+                gap: 20px;
+                &__icon{
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .tj__product-details-icon-wrapper{
+                @include tj__flex-items-center;
+                gap: 16px;
+                justify-content: start;
+                margin-top: 30px;
+                flex-wrap: wrap;
+                &__item{
+                    .tj__product-details-wishlist{
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 50%;
+                        line-height: 60px;
+                        display: inline-block;
+                        text-align: center;
+                        background-color: var(--tj__theme-secondary-color);
+                        color: var(--tj__primary-color);
+                        @include tj__common-trans;
+                        &:hover{
+                            background-color: var(--tj__theme-primary-color);
+                        }
+                    }
+                }
+            }
+            .tj__product-details-category-tag-wrapper{
+                margin-top: 35px;
+                p{
+                    &:last-child{
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+    &.tj__product-details-popup-view{
+        position: fixed;
+        visibility: visible;
+        opacity: 1;
+        width: max-content;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        transition: 0.3s;
+        height: auto;
+        z-index: 1000;
+        padding: 15px 15px;
+        background: #fff;
+        gap: 20px;
+        border-radius: 20px;
+        border: 1px solid var(--tj__border-color);
+        @include tj__screen-1299{
+            width: 85%;
+        }
+        @include tj__screen-991{
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .tj__product-details-close-icon{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: -50px;
+            top: -50px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #fff;
+            color: var(--tj__theme-msu-green);
+            @include tj__common-trans;
+            @include tj__screen-991{
+                right: 14px;
+                top: -14px;
+                background-color: var(--tj__theme-crime);
+                position:relative;
+                background-color: var(--tj__theme-secondary-color);
+                color: var(--tj__theme-msu-green);
+                &:hover{
+                    background-color: var(--tj__theme-primary-color);
+                    color: var(--tj__primary-color);
+                }
+            }
+            &:hover{
+                color: var(--tj__theme-primary-color);
+            }
+        }
+    }
+}
+// End Product Details
+
+// 

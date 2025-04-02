@@ -1,0 +1,170 @@
+// Start Hero Area Home 1
+.tj__hero-area-home-1 {
+    @include tj__common-position-relative;
+
+    &__wrapper {
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        min-height: 705px;
+        @include tj__common-position-relative;
+        @include tj__screen-575{
+            min-height: 580px;
+        }
+        @include tj__screen-991{
+            background-position: right;
+        }
+        &__inner {
+            @include tj__common-position-relative;
+
+            &__items {
+                &__item {
+                    @include tj__common-position-relative;
+
+                    &__shep-1 {
+                        @include tj__common-position-absolute;
+                        top: 135px;
+                        left: -30px;
+                        @include tj__screen-767{
+                            top: 180px;
+                            left: -25px;
+                        }
+                        @include tj__screen-575{
+                            top: 110px
+                        }
+                        @include tj__screen-439{
+                            top: 135px;
+                            left: 5px;
+                        }
+                    }
+
+                }
+
+                &__text {
+                    @include tj__common-position-absolute;
+                    top: 58%;
+                    left: 33%;
+                    transform: translate(-50%, -50%);
+                    @media (max-width:1540px){
+                        left: 30%;
+                    }
+                    @include tj__screen-1399{
+                        left: 35%;
+                    }
+                    @include tj__screen-1199{
+                        left: 40%;
+                    }
+                    @include tj__screen-991{
+                        left: 48%;
+                    }
+                    @include tj__screen-767{
+                        top: 55%;
+                        left: 55%;
+                    }
+                    @include tj__screen-650{
+                        left: 50%;
+                    }
+                    @include tj__screen-439{
+                        top: 50%;
+                        left: 47%;;
+                    }
+                    @include tj__screen-390{
+                        top: 50%;
+                        left: 47%;
+                        width: 60%;
+                    }
+                    &__title{
+                        margin-top: 8px;
+                        margin-bottom: 27px;
+                        @include tj__screen-767{
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Hero Area Home 1
+
+// Start Hero Area Home 3
+.tj__hero-area-home-3{
+    @include tj__common-position-relative;
+    z-index: 1;
+    .tj__hero-home-3-shep-5{
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .tj__hero-home-3-shep-6{
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    @include tj__screen-1199{
+        margin-left: 0;
+    }
+    &__wrapper{
+        @include tj__common-position-relative;
+       &__item{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 560px;
+        background-color: var(--tj__theme-crime);
+        &__images{
+            @include tj__common-position-absolute;
+            bottom: 0;
+            right: 0;
+        }
+        &__text-content{
+            @include tj__common-position-absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+            width: 100%;
+            @include tj__screen-767{
+                left: 15px;
+            }
+            &__title{
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+            &__peragrahp{
+                @include tj__screen-767{
+                    padding-right: 10px;
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            &__btn{
+                margin-top: 32px;
+            }
+        }
+        .tj__hero-area-home-3-shep{
+            @include tj__common-position-absolute;
+            &.tj__hero-home-3-shep-1{
+                top: 45px;
+                left: 25%;
+            }
+            &.tj__hero-home-3-shep-2{
+                top: 45px;
+                right: 90px;
+            }
+            &.tj__hero-home-3-shep-3{
+                bottom: 122px;
+                left: 35%;
+            }
+            &.tj__hero-home-3-shep-4{
+                bottom: -30%;
+                left: -25%;
+            }
+        }
+       } 
+    }
+}
+// End Hero Area Home 3 

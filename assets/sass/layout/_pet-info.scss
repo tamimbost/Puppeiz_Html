@@ -1,0 +1,141 @@
+// Start Pet Info Area Home 2
+.tj__pet-info-area-home-2{
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        @include tj__screen-991{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+        &__items{
+            background-color: var(--tj__primary-color);
+            box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            padding: 40px;
+            @include tj__screen-1199{
+                padding: 20px;
+            }
+            @include tj__screen-991{
+                padding: 30px;
+                max-width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &__details{
+                @include tj__flex-items-center;
+                gap: 40px;
+                justify-content: start;
+                @include tj__screen-1199{
+                    gap: 20px;
+                }
+                @include tj__screen-575{
+                    display: block;
+                }
+                &__img{
+                    @include tj__screen-575{
+                        max-width: max-content;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 24px;
+                    }
+                }
+                &__text-content{
+                    @include tj__screen-575{
+                        text-align: center;
+                    }
+                    &__title{
+                        color: var(--tj__theme-msu-green);
+                        margin-bottom: 20px;
+                    }
+                    &__list{
+                        @include tj__screen-575{
+                            max-width: max-content;
+                            margin-left: auto;
+                            margin-right: auto;
+
+                        }
+                        li{
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+                            border-bottom: 1px dashed var(--tj__border-color);
+                            padding-bottom: 10px;
+                            margin-bottom: 10px;
+                            @include tj__screen-1199{
+                                gap: 15px;
+                            }
+                            @include tj__screen-575{
+                                justify-content: center;
+                                max-width: max-content;
+                            }
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            span{
+                                font-family: var(--tj__secondary-font);
+                                &:last-child{
+                                    font-family: var(--tj__primary-font);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &__medicine-info{
+                background-color: var(--tj__theme-crime);
+                border-radius: 10px;
+                padding: 15px 55px;
+                @include tj__flex-between;
+                margin-top: 40px;
+                @include tj__common-position-relative;
+                @include tj__screen-1199{
+                    padding: 15px 20px;
+                }
+                @include tj__screen-575{
+                    display: block;
+                }
+                &::before{
+                    @include tj__common-before;
+                    background-color: var(--tj__theme-msu-green);
+                    top: 50%;
+                    left: 55%;
+                    transform: translate(-50%, -50%);
+                    width: 1px;
+                    height: 30px;
+                    @include tj__screen-767{
+                        display: none; 
+                    }
+                }
+                &__item{
+                    @include tj__flex-items-center;
+                    justify-content: start;
+                    gap: 15px;
+                    &:last-child{
+                        @include tj__screen-575{
+                            margin-top: 20px;
+                        }
+                    }
+                    &__text{
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            &__button{
+                text-align: center;
+                margin-top: 35px;
+                a{
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    @include tj__common-trans;
+                    &:hover{
+                        color: var(--tj__theme-msu-green);
+                    }
+                }
+            }
+        }
+    }
+}
+// End Pet Info Area Home 2

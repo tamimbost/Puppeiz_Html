@@ -1,0 +1,98 @@
+// Start Why Choose Banner Home 1
+.tj__why-choose-banner-area-home-1{
+    @include tj__common-position-relative;
+    height: 558px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: -120px;
+    z-index: -1;
+    &__wrapper{
+        @include tj__common-position-absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+// End Why Choose Banner Home 1
+
+// Start Why Choose Area Home 1 (Not Banner)
+.tj__why-choose-us-area-home-1{
+    @include tj__common-position-relative;
+    margin-top: -210px;
+    @include tj__screen-991{
+        margin-top: -160px;
+    }
+    &__wrapper{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: var(--tj__primary-color);
+        box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        @include tj__screen-991{
+            background-image: none
+        }
+        &__innner{
+            @include tj__flex-items-center;
+            justify-content: space-between;
+            padding: 80px;
+            @include tj__screen-991{
+                display: block;
+                padding: 40px;
+            }
+            &__items{
+                @include tj__common-position-relative;
+                @include tj__screen-1099{
+                    width: 30%;
+                }
+                @include tj__screen-991{
+                    width: 100%;
+                }
+                &:nth-child(1){
+                    text-align: right;
+                    .tj__why-choose-us-area-home-1__wrapper__innner__items__item__icon{
+                        max-width: max-content;
+                        margin-left: auto;
+                        display: block;
+                    }
+                }
+                &__item{
+                    &:last-child{
+                        margin-top: 32px;
+                    }
+                    &__title{
+                        margin-top: 14px;
+                        margin-bottom: 8px;
+                    }
+                    &__peragraph{
+                        margin-bottom: 20px;
+                        @include tj__screen-1099{
+                            br{
+                                display: none;
+                            }
+                        }
+                    }
+                    &__btn{
+                        text-decoration: underline;
+                        @include tj__common-trans;
+                        &:hover{
+                            color: var(--tj__theme-msu-green);
+                        }
+                    }
+                }
+            }
+            &__image{
+                @include tj__screen-1099{
+                    width: 30%;
+                }
+                @include tj__screen-991{
+                    width: 100%;
+                    max-width: max-content;
+                    margin: 30px auto;
+                }
+            }
+        }
+    }
+}
+// End Why Choose Area Home 1 (Not Banner)

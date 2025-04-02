@@ -1,0 +1,47 @@
+// Start Black Friday Area Home 3
+.tj__back-friday-area-home-3 {
+    z-index: 2;
+    @include tj__common-position-relative;
+    &__wrapper {
+        &__inner {
+            height: 400px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding-left: 80px;
+            padding-top: 84px;
+
+            @include tj__screen-767 {
+                padding-left: 30px;
+            }
+
+            &__text-content {
+                &__sub-title {
+                    font-size: var(--tj__fs-h5);
+                }
+
+                &__title {
+                    font-size: 44px;
+                    line-height: 54px;
+                    margin-top: 10px;
+
+                    @include tj__screen-767 {
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                &__button {
+                    margin-top: 30px;
+
+                    a {
+                        background-color: var(--tj__theme-secondary-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Black Friday Area Home 3

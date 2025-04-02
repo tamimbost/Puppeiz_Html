@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Comparison Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+        }
+        .comparison-table thead {
+            background: #f8f9fa;
+        }
+        .product-image img {
+            max-width: 100px;
+            height: auto;
+        }
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .stock-in {
+            background-color: #d4f8d4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .stock-out {
+            background-color: #f8d4d4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .btn-cart {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-cart:disabled {
+            background-color: gray;
+        }
+        @media (max-width: 768px) {
+            .table-responsive {
+                overflow-x: auto;
+            }
+            .comparison-table thead {
+                display: none;
+            }
+            .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            .comparison-table tr {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+            }
+            .comparison-table td {
+                padding-left: 0;
+                padding-right: 0;
+                position: relative;
+                text-align: center;
+            }
+            .comparison-table td::before {
+                content: attr(data-label);
+                display: block;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container my-4">
+    <div class="table-responsive">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Preview</th>
+                    <th>J.Crew Mercantile Women's Short</th>
+                    <th>Amazon Essentials Women's Tanks</th>
+                    <th>Amazon Brand - Daily Ritual Wom</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Preview" class="product-image"><img src="product1.jpg" alt="Product 1"></td>
+                    <td class="product-image"><img src="product2.jpg" alt="Product 2"></td>
+                    <td class="product-image"><img src="product3.jpg" alt="Product 3"></td>
+                </tr>
+                <tr>
+                    <td data-label="Name">J.Crew Mercantile Women's Short</td>
+                    <td>Amazon Essentials Women's Tanks</td>
+                    <td>Amazon Brand - Daily Ritual Wom</td>
+                </tr>
+                <tr>
+                    <td data-label="Price" class="price">$25.00</td>
+                    <td class="price">$39.25</td>
+                    <td class="price">$12.00</td>
+                </tr>
+                <tr>
+                    <td data-label="Description">Lorem Ipsum is simply dummy text...</td>
+                    <td>Lorem Ipsum is simply dummy text...</td>
+                    <td>Lorem Ipsum is simply dummy text...</td>
+                </tr>
+                <tr>
+                    <td data-label="Rating">⭐⭐⭐⭐⭐ (25)</td>
+                    <td>⭐⭐⭐⭐⭐ (19)</td>
+                    <td>⭐⭐⭐⭐⭐ (120)</td>
+                </tr>
+                <tr>
+                    <td data-label="Weight">320 gram</td>
+                    <td>370 gram</td>
+                    <td>380 gram</td>
+                </tr>
+                <tr>
+                    <td data-label="Stock status"><span class="stock-in">In Stock</span></td>
+                    <td><span class="stock-out">Out Of Stock</span></td>
+                    <td><span class="stock-in">In Stock</span></td>
+                </tr>
+                <tr>
+                    <td data-label="Buy Now"><button class="btn-cart">Add To Cart 🛒</button></td>
+                    <td><button class="btn-cart" disabled>Add To Cart 🛒</button></td>
+                    <td><button class="btn-cart">Add To Cart 🛒</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+.tj__product-details-popup-view{
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    width: max-content;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 0.3s;
+    height: auto;
+    z-index: 1000;
+    padding: 15px 15px;
+    background: #fff;
+    gap: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--tj__border-color);
+    @include tj__screen-1299{
+        width: 85%;
+    }
+    .tj__product-details-close-icon{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: -50px;
+        top: -50px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--tj__theme-msu-green);
+        @include tj__common-trans;
+        @include tj__screen-991{
+            right: 0;
+        }
+        &:hover{
+            color: var(--tj__theme-primary-color);
+        }
+    }
+}

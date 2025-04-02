@@ -1,0 +1,52 @@
+// Start Feature Product Area Home 3
+.tj__feature-product-area-home-3{
+    @include tj__common-position-relative;
+    padding-top: 100px;
+    z-index: 1;
+    @include tj__screen-991{
+        padding-top: 80px;
+    }
+    @include tj__screen-767{
+        padding-top: 70px;
+    }
+    &__wrapper{
+        @include tj__flex-items-center;
+        gap: 24px;
+        @include tj__screen-1299{
+            flex-wrap: wrap;
+        }
+        &__item{
+            height: 250px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 391px;
+            border-radius: 30px;
+            background-position: center center;
+            &:hover{
+               .tj__feature-product-area-home-3__wrapper__item__info__discount-tag{
+                background-color: var(--tj__primary-color);
+                color: var(--tj__theme-primary-color);
+               } 
+            }
+            &__info{
+                padding: 40px 0 40px 30px;
+                &__discount-tag{
+                    font-size: var(--tj__fs-pg3);
+                    line-height: var(--tj__lg-pg3);
+                    font-family: var(--tj__secondary-font);
+                    background-color: var(--tj__theme-primary-color);
+                    border-radius: 30px;
+                    padding: 4px 15px;
+                    @include tj__common-trans;
+                }
+                &__product-title{
+                    margin-top: 12px;
+                }
+                &__btn{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+// End Feature Product Area Home 3

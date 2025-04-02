@@ -1,0 +1,38 @@
+// Start Popular Product Area Home 3
+.tj__popular-product-area-home-3 {
+    @include tj__common-position-relative;
+    .tj__popular-product-title-wrapper{
+        @include tj__flex-between;
+        @include tj__screen-991{
+            display: block;
+        }
+        .tj__title-style-1{
+            @include tj__screen-991{
+                text-align: center;
+            }
+        }
+        ul{
+            gap: 25px;
+            @include tj__screen-991{
+                justify-content: center;
+                margin-top: 30px;
+            }
+        }
+        button{
+            color: var(--tj__theme-gray);
+            font-family: var(--tj__secondary-font);
+            font-size: var(--tj__fs-pg3);
+            line-height: var(--tj__lg-pg3);
+            font-weight: var(--tj__fw-regular);
+            border: 1px solid #d8dde1;
+            border-radius: 6px;
+            padding: 6px 11.6px;
+            background: #f5f7eb;
+            &.active{
+                background-color: var(--tj__theme-primary-color);
+                color: var(--tj__primary-color);
+            }
+        }
+    }
+}
+// End Popular Product Area Home 3

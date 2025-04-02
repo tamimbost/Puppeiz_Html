@@ -1,0 +1,134 @@
+// Start Skill Area Home 2
+.tj__skill-area-home-2 {
+    @include tj__common-position-relative;
+    background-color: var(--tj__theme-crime);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .tj__skill-peragraph {
+        margin-top: 18px;
+        @include tj__screen-767{
+            br{
+                display: none;
+            }
+        }
+    }
+
+    &__wrapper {
+        @include tj__flex-items-center;
+        gap: 20px;
+        @include tj__screen-1299{
+            flex-wrap: wrap;
+        }
+        &__inner {
+            @include tj__common-position-relative;
+
+            &:nth-child(2) {
+                .tj__skill-border-shep {
+                    background: linear-gradient(185deg, #FF4A7B, #9846070F);
+                }
+
+                .tj__skill-area-home-2__wrapper__inner__item {
+                    &:hover {
+                        .tj__skill-area-home-2__wrapper__inner__item__skill-rating {
+                            color: #FF4A7B;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                .tj__skill-border-shep {
+                    background: linear-gradient(185deg, #1CBBB4, #9846070F);
+                }
+
+                .tj__skill-area-home-2__wrapper__inner__item {
+                    &:hover {
+                        .tj__skill-area-home-2__wrapper__inner__item__skill-rating {
+                            color: #1CBBB4;
+                        }
+                    }
+                }
+
+            }
+
+            &:nth-child(4) {
+                .tj__skill-border-shep {
+                    background: linear-gradient(185deg, #2390FF, #9846070F);
+                }
+
+                .tj__skill-area-home-2__wrapper__inner__item {
+                    &:hover {
+                        .tj__skill-area-home-2__wrapper__inner__item__skill-rating {
+                            color: #2390FF;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                .tj__skill-border-shep {
+                    background: linear-gradient(185deg, #7DBE48, #9846070F);
+                }
+
+                .tj__skill-area-home-2__wrapper__inner__item {
+                    &:hover {
+                        .tj__skill-area-home-2__wrapper__inner__item__skill-rating {
+                            color: #7DBE48;
+                        }
+                    }
+                }
+            }
+
+            .tj__skill-border-shep {
+                background: linear-gradient(185deg, #FE750B, #9846070F);
+                @include tj__common-position-absolute;
+                border-radius: 18px;
+                width: 100.9%;
+                height: 70%;
+                display: block;
+                top: -1px;
+                left: -1px;
+            }
+
+            &__item {
+                border-radius: 18px;
+                background-color: var(--tj__primary-color);
+                padding: 40px 20px;
+                width: 227px;
+                @include tj__common-position-relative;
+
+                &:hover {
+                    cursor: pointer;
+
+                    .tj__skill-area-home-2__wrapper__inner__item__skill-rating {
+                        color: #FE750B;
+                    }
+                }
+
+                img {
+                    max-width: max-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                &__title {
+                    text-align: center;
+                    margin-top: 22px;
+                }
+
+                &__skill-rating {
+                    text-align: center;
+                    color: var(--tj__theme-msu-green);
+                    @include tj__common-trans;
+                    font-size: 36px;
+                    line-height: 46px;
+                    margin-top: 12px;
+                }
+            }
+
+        }
+    }
+}
+
+// End Skill Area Home 2

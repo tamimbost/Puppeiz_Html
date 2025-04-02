@@ -1,0 +1,34 @@
+// Start Bread Crumb Area
+.tj__breadcrumb-area{
+    @include tj__common-position-relative;
+    background-color: var(--tj__theme-crime);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 67px;
+    @include tj__screen-767{
+        padding-top: 50px;
+    }
+    &__wrapper{
+        @include tj__flex-between;
+        @include tj__screen-767{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        &__text-content{
+            &__page-indexing{
+                margin-top: 12px;
+                
+                a{
+                    font-family: var(--tj__secondary-font);
+                    @include tj__common-trans;
+                    &:hover{
+                        color: var(--tj__theme-primary-color);
+                    }
+                }
+            }
+        }
+    }
+}
+// End Bread Crumb Area 

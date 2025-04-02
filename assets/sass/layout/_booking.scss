@@ -1,0 +1,80 @@
+// Start Booking System Area Home 1
+.tj__booking-system-area-home-1{
+    @include tj__common-position-relative;
+    &__wrapper{
+        background-color: var(--tj__theme-primary-color);
+        border-radius: 10px;
+        padding: 60px;
+        @include tj__screen-575{
+            padding: 30px;
+        }
+        &__inner{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            @include tj__screen-991{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include tj__screen-767{
+                grid-template-columns: repeat(1, 1fr);
+            }
+            input{
+                padding: 18px 20px;
+                background-color: var(--tj__primary-color);
+                border-radius: 5px;
+                border: none;
+                font-size: var(--tj__fs-pg-body);
+                color: #696969;
+                font-weight: 400;
+                &::placeholder{
+                    font-size: var(--tj__fs-pg-body);
+                    font-weight: 400;
+                    color: #696969;
+                }
+            }
+            
+            .tj__dog-hair-cut{
+                .list{
+                    width: 100%;
+                }
+                &.nice-select{
+                    padding: 0px 20px;
+                    background-color: var(--tj__primary-color);
+                    border-radius: 5px;
+                    border: none;
+                    font-size: var(--tj__fs-pg-body);
+                    color: var(--tj__secondary-color);
+                    font-weight: 400;
+                    height: 60px;
+                    &::after{
+                        width: 10px;
+                        height: 10px;
+                        margin-top: -10px;
+                        right: 20px;
+                    }
+                    .current{
+                        font-size: var(--tj__fs-pg-body);
+                        color: var(--tj__secondary-color);
+                        font-weight: 400;
+                        color: #696969;
+                        @include tj__common-position-relative;
+                        top: 12px;
+                    }
+                }
+            }
+            button[type="submit"]{
+                background-color: transparent;
+                border: 1px solid var(--tj__primary-color);
+                border-radius: 5px;
+                color: var(--tj__primary-color);
+                padding: 18px 20px;
+                @include tj__common-trans;
+                &:hover{
+                    background-color: var(--tj__theme-secondary-color);
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+// End Booking System Area Home 1

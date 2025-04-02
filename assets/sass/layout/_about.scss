@@ -1,0 +1,247 @@
+// Start About Area Home 1
+.tj__about-area-home-1{
+    @include tj__common-position-relative;
+    &__shep-2{
+        @include tj__common-position-absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @media (max-width:1660px){
+            width: 10%;
+        }
+        @include tj__screen-1099{
+            width: unset;
+        }
+        @include tj__screen-1399{
+            top: 10%;
+        }
+    }
+    &__shep-1{
+        @include tj__common-position-absolute;
+        left: 0;
+        top: -100px;
+        @media (max-width:1660px){
+            width: 20%;
+        }
+        @include tj__screen-1099{
+            width: unset;
+        }
+    }
+    &__wrapper{
+        @include tj__flex-items-center;
+        gap: 75px;
+        align-items: start;
+        @include tj__screen-1199{
+            gap: 40px;
+        }
+        @include tj__screen-1099{
+            display: block;
+        }
+        &__img-content{
+            @include tj__common-position-relative;
+            @include tj__screen-1099{
+                width: 40%;
+            }
+            @include tj__screen-1099{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: max-content;
+            }
+            &__img-2{
+                @include tj__common-position-absolute;
+                top: 30%;
+                left: -30%;
+            }
+            &__cutting-services-count{
+                width: 206px;
+                height: 206px;
+                border-radius: 50%;
+                background-color: var(--tj__theme-primary-color);
+                top: -20px;
+                left: -40px;
+                @include tj__common-position-absolute;
+                padding: 40px 0 20px 0;
+                &__number{
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+
+            }
+
+        }
+        &__text-content{
+            @include tj__screen-1399{
+                width: 50%;
+            }
+            @include tj__screen-1099{
+                width: 100%;
+                margin-top: 40px;
+            }
+            @include tj__screen-575{
+                margin-top: 70px;
+            }
+            @include tj__screen-439{
+                margin-top: 110px;
+            }
+            .tj__title-style-1{
+                h2{
+                    @include tj__screen-1199{
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &__peragraph{
+                margin-top: 30px;
+                @include tj__screen-1199{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+            &__clients-items{
+                @include tj__flex-items-center;
+                justify-content: start;
+                gap: 145px;
+                margin-top: 32px;
+                padding-bottom: 40px;
+                border-bottom: 1px solid var(--tj__border-color);
+                @include tj__screen-1199{
+                    gap: 45px;
+                }
+                @include tj__screen-575{
+                    gap:15px;
+                }
+                &__btn{
+                    padding: 18px 35px;
+                    border-radius: 95px;
+                    background-color: var(--tj__theme-primary-color);
+                    color: var(--tj__primary-color);
+                    @include tj__common-trans;
+                    &:hover{
+                        background-color: var(--tj__theme-msu-green);
+                    }
+                }
+                &__info{
+                    @include tj__flex-items-center;
+                    justify-content: start;
+                    gap: 15px;
+                }
+            }
+            &__cour-services-info{
+                @include tj__flex-items-center;
+                justify-content: start;
+                gap: 55px;
+                margin-top: 38px;
+                @include tj__screen-1199{
+                    gap: 25px;
+                    justify-content: space-between;
+                }
+                @include tj__screen-575{
+                    display: block;
+                }
+                &__items{
+                    @include tj__flex-items-center;
+                    justify-content: start;
+                    gap: 30px;
+                    @include tj__screen-1199{
+                        gap: 15px;
+                    }
+                    &:last-child{
+                        @include tj__screen-575{
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End About Area Home 1
+
+// Start About Area Home 2
+.tj__about-area-home-2{
+    &__wrapper{
+        @include tj__flex-items-center;
+        gap: 185px;
+        @include tj__screen-1299{
+            gap: 140px;
+        }
+        @include tj__screen-991{
+            display: block;
+        }
+        &__img-content{
+            @include tj__common-position-relative;
+            @include tj__screen-991{
+                margin-left: auto;
+                margin-right: auto;
+                max-width: max-content;
+            }
+            &__pet-info{
+                background-color: var(--tj__theme-primary-color);
+                border-radius: 30px;
+                padding: 30px;
+                @include tj__common-position-absolute;
+                top: 50%;
+                right: -25%;
+                transform: translateY(-50%);
+                @include tj__screen-767{
+                    @include tj__common-position-relative;
+                    right:unset;
+                    top: unset;
+                    transform: unset;
+                    margin-top: 30px;
+                }
+                ul{
+                    li{
+                        border-bottom: 1px solid var(--tj__border-color);
+                        padding-bottom: 15px;
+                        padding-top: 14px;
+                        &:first-child{
+                            padding-top: 0;
+                        }
+                        &:last-child{
+                            border-bottom: none;
+                        }
+
+                    }
+                }
+                &__title{
+                    margin-bottom: 6px;
+                }
+            }
+        }
+        &__text-content{
+            @include tj__screen-1299{
+                width: 50%;
+            }
+            @include tj__screen-767{
+                width: 100%;
+                margin-top: 45px;
+                text-align: center;
+            }
+          &__title{
+            margin-bottom: 30px;
+            margin-top: 25px;
+            @include tj__screen-1299{
+                br{
+                    display: none;
+                }
+            }
+          }  
+          &__peragraph{
+            @include tj__screen-1299{
+                br{
+                    display: none;
+                }
+            }
+          }
+          &__btn{
+            margin-top: 32px;
+          }
+        }
+    }
+}
+// End About Area Home 2

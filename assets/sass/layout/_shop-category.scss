@@ -1,0 +1,77 @@
+// Start Shop Category Area Home 3
+.tj__shop-category-area-home-3{
+   background-color: var(--tj__theme-crime);
+   padding-top: 220px;
+   margin-top: -120px;
+   .tj__shop-category-shep-1{
+    top: 0;
+    left: 0;
+   }
+   .tj__shop-category-shep-2{
+    top: 0;
+    right: 0;
+   }
+    &__wrapper{
+        @include tj__flex-between;
+        @include tj__screen-991{
+            justify-content: center;
+            gap: 55px;
+            flex-wrap: wrap;
+        }
+        &__item{
+            &:hover{
+                cursor: pointer;
+                .tj__shop-category-area-home-3__wrapper__item__img{
+                    transform: rotateY(360deg);
+                }
+            }
+            &__img{
+                @include tj__common-position-relative;
+                @include tj__common-trans;
+                z-index: 1;
+                &::before{
+                    @include tj__common-before;
+                    width: 130px;
+                    height: 130px;
+                    background-color: var(--tj__primary-color);
+                    border-radius: 50%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+                &::after{
+                    @include tj__common-after;
+                    background-color: transparent;
+                    border: 1px dashed #b5b5b5;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                }
+                img{
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: max-content;
+                }
+            }
+            &__text-content{
+                text-align: center;
+                margin-top: 33px;
+                &__product-name{
+                    a{
+                        @include tj__common-trans;
+                    }
+                    &:hover{
+                        a{
+                            color: var(--tj__theme-primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End Shop Category Area Home 3

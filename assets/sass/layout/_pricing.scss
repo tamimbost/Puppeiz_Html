@@ -1,0 +1,173 @@
+// Start Pricing Area Home 1
+.tj__pricing-area-home-1{
+    &__wrapper{
+        &__inner{
+            @include tj__flex-items-center;
+            gap: 24px;
+            @include tj__screen-1199{
+                flex-wrap: wrap;
+                row-gap: 0;
+                column-gap: 24px;
+            }
+            &__item{
+                &.tj__pricing-current-item{
+                    .tj__pricing-area-home-1__wrapper__inner__item__top-part{
+                        background-color: var(--tj__theme-primary-color);
+                        .tj__pricing-area-home-1__wrapper__inner__item__top-part__pack-name{
+                            color: var(--tj__primary-color);
+                        }
+                        .tj__pricing-area-home-1__wrapper__inner__item__top-part__price{
+                            color: var(--tj__primary-color);
+                            span{
+                                color: var(--tj__primary-color);
+                            }
+                        }
+                    }
+                    .tj__pricing-area-home-1__wrapper__inner__item__bottom-part{
+                        .tj__pricing-area-home-1__wrapper__inner__item__bottom-part__icon{
+                            background-color: var(--tj__theme-msu-green);
+                        }
+                        .tj__pricing-area-home-1__wrapper__inner__item__bottom-part__button{
+                            a{
+                                background-color: var(--tj__theme-primary-color);
+                                color: var(--tj__primary-color);
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    cursor: pointer;
+                    .tj__pricing-area-home-1__wrapper__inner__item__top-part{
+                        background-color: var(--tj__theme-primary-color);
+                        .tj__pricing-area-home-1__wrapper__inner__item__top-part__pack-name{
+                            color: var(--tj__primary-color);
+                        }
+                        .tj__pricing-area-home-1__wrapper__inner__item__top-part__price{
+                            color: var(--tj__primary-color);
+                            span{
+                                color: var(--tj__primary-color);
+                            }
+                        }
+                    }
+                    .tj__pricing-area-home-1__wrapper__inner__item__bottom-part{
+                        .tj__pricing-area-home-1__wrapper__inner__item__bottom-part__icon{
+                            background-color: var(--tj__theme-msu-green);
+                            transform: rotateY(360deg);
+                        }
+                    }
+                }
+                &__top-part{
+                    border-radius: 15px;
+                    background-color: var(--tj__theme-crime);
+                    width: 391px;
+                    height: 306px;
+                    text-align: center;
+                    padding-top: 40px;
+                    @include tj__screen-1299{
+                        width: 350px;
+                    }
+                    @include tj__common-trans;
+                    @include tj__screen-575{
+                        width: 320px;
+                    }
+                    &__price{
+                        margin-top: 10px;
+                        @include tj__common-trans;
+                        span{
+                            font-size: var(--tj__fs-pg2);
+                            line-height: 26px;
+                            color: var(--tj__theme-gray);
+                            margin-left: -5px;
+                            font-family: var(--tj__primary-font);
+                            @include tj__common-trans;
+                        }
+                    }
+                    &__pack-name{
+                        @include tj__common-trans;
+                    }
+                }
+                &__bottom-part{
+                    border-radius: 10px;
+                    background-color: var(--tj__primary-color);
+                    border: 1px solid var(--tj__border-color);
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 40px;
+                    width: 331px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    @include tj__common-position-relative;
+                    top: -90px;
+                    z-index: 1;
+                    @include tj__screen-1299{
+                        width: 320px;
+                    }
+                    @include tj__screen-575{
+                        width: 300px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                    &__shep-1{
+                        @include tj__common-position-absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+                    &__icon{
+                        background-color: var(--tj__theme-primary-color);
+                        border-radius: 5px;
+                        width: 90px;
+                        height: 90px;
+                        display: block;
+                        @include tj__common-position-relative;
+                        top: -35px;
+                        @include tj__common-trans;
+                        img{
+                            @include tj__common-position-absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    &__options{
+                        margin-top: 2px;
+                        li{
+                            @include tj__flex-items-center;
+                            justify-content: start;
+                            gap: 10px;
+                            margin-bottom: 10px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            span{
+                                color: var(--tj__theme-gray);
+                                font-size: var(--tj__fs-pg2);
+                                line-height: 26px;
+                                font-family: var(--tj__primary-font);
+                            }
+                        }
+                    }
+                    &__button{
+                        text-align: center;
+                        display: block;
+                        margin-top: 35px;
+                        a{
+                            color: var(--tj__theme-msu-green);
+                            border: 1px solid var(--tj__border-color);
+                            padding: 13px 50px;
+                            border-radius: 95px;
+                            display: block;
+                            @include tj__common-trans;
+                            &:hover{
+                                background-color: var(--tj__theme-primary-color);
+                                color: var(--tj__primary-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// End Pricing Area Home 1

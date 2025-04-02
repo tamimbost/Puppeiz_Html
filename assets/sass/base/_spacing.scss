@@ -1,0 +1,30 @@
+.tj__title-wrapper-bottom-gap{
+    margin-bottom: 52px;
+    @include tj__screen-767{
+        margin-bottom: 45px;
+    }
+}
+.tj__section-top-gap{
+    padding-top: 110px;
+    @include tj__screen-991{
+        padding-top: 85px;
+    }
+    @include tj__screen-767{
+        padding-top: 60px;
+    }
+}
+.tj__section-bottom-gap{
+    padding-bottom: 120px;
+    @include tj__screen-991{
+        padding-bottom: 85px;
+    }
+    @include tj__screen-767{
+        padding-bottom: 60px;
+    }
+}
+.tj__section-left-gap{
+    padding-left: 15px;
+}
+.tj__section-right-gap{
+    padding-right: 15px;
+}

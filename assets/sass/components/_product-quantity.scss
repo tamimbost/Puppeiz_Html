@@ -1,0 +1,55 @@
+// Start Product Quantity
+.tj__product-quantity{
+    width: 130px;
+    border-radius: 30px;
+    border: 1px solid var(--tj__border-color);
+    @include tj__flex-items-center;
+    @include tj__common-position-relative;
+    padding: 2.5px 0;
+    &::before{
+        @include tj__common-before;
+        width: 1px;
+        height: 100%;
+        background-color: var(--tj__border-color);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tj__product-quantity-fieldset{
+        width: 50%;
+        text-align: center;
+        overflow: hidden;
+        .tj__quantity-fieldset{
+            border-radius: 30px;
+            padding: 5px 10px;
+            text-align: center;
+            width: 100%;
+            border: none;
+        }
+    }
+    .tj__product-quantity-btn{
+        width: 50%;
+        text-align: center;
+        @include tj__common-position-relative;
+        top: 3px;
+        .tj__quantity-increase,
+        .tj__quantity-decrease{
+            font-size: 25px;
+            font-weight: 400;
+            color: var(--tj__theme-msu-color);
+            cursor: pointer;
+        }
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+// End Product Quantity
+

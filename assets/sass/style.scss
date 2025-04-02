@@ -1,0 +1,58 @@
+/*
+Theme Name: Puppiez
+Author: Vecuro_Themes
+Author URI: https://themeforest.net/user/vecuro_themes
+Discription: AI Agency & Technology Html5 Template
+Version: 1.0.0
+Developed By : MD Saiful Islam Tamim
+*/
+
+/************************************** base css **************************************/
+@import "base/variables";
+@import "base/breakpoints";
+@import "base/reset";
+@import "base/typography";
+@import "base/spacing";
+@import "base/mixin";
+
+/******************************* theme css **********************************/
+@import "theme/theme-class";
+@import "theme/animations";
+@import "theme/plugincustomize";
+@import "theme/wowcustomanimation";
+
+/******************************** components ******************************/
+@import "components/header";
+@import "components/buttons";
+@import "components/footer";
+@import "components/sitebar";
+@import "components/_mobile-menu";
+@import "components/popup";
+@import "components/product-cart";
+@import "components/search";
+@import "components/breadcrumb";
+@import "components/_product-quantity";
+@import "components/product-discount-banner";
+@import "components/countdown";
+
+/****************************** page styles ******************************/
+@import "layout/hero";
+@import "layout/about";
+@import "layout/services";
+@import "layout/team";
+@import "layout/booking";
+@import "layout/choose-item";
+@import "layout/projects";
+@import "layout/pricing";
+@import "layout/testimonial";
+@import "layout/blog";
+@import "layout/skill";
+@import "layout/pet-info";
+@import "layout/features";
+@import "layout/shop-category";
+@import "layout/popular-product";
+@import "layout/product-details";
+@import "layout/_product-review";
+@import "layout/week-deals";
+@import "layout/trending-product";
+@import "layout/black-friday";

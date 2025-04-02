@@ -1,0 +1,100 @@
+// Start Secondary Font 
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+// End Secondary Font
+
+// Start Primary Font 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+// End Primary Font
+
+// Start Heading Font Size
+h1{
+    font-size: var(--tj__fs-heading-max);
+    line-height: var(--tj__lg-heading-max) ;
+    @include tj__screen-991{
+        font-size: var(--tj__fs-h2);
+        line-height: var(--tj__lg-h2) ;
+    }
+    @include tj__screen-767{
+        font-size: var(--tj__fs-h3);
+        line-height: var(--tj__lg-h3) ;
+    }
+}
+h2{
+    font-size: var(--tj__fs-h2);
+    line-height: var(--tj__lg-h2) ;
+    @include tj__screen-991{
+        font-size: var(--tj__fs-h3);
+        line-height: var(--tj__lg-h3) ;
+    }
+}
+h3{
+    font-size: var(--tj__fs-h3);
+    line-height: var(--tj__lg-h3) ;
+}
+h4{
+    font-size: var(--tj__fs-h4);
+    line-height: var(--tj__lg-h4) ;
+}
+h5{
+    font-size: var(--tj__fs-h5);
+    line-height: var(--tj__lg-h5) ;
+}
+h6{
+    font-size: var(--tj__fs-h6);
+    line-height: var(--tj__lg-h6) ;
+}
+.tj__heading-font-size-min-1{
+    font-size: var(--tj__fs-heading-min-1);
+    line-height: var(--tj__lg-heading-min-1) ;
+}
+.tj__heading-font-size-min-2{
+    font-size: var(--tj__fs-heading-min-2);
+    line-height: var(--tj__lg-heading-min-2) ;
+}
+// End Heading Font Size
+
+// Start Body Font Size
+p{
+    font-size: var(--tj__fs-pg-body);
+    line-height: var(--tj__lg-pg-body);
+}
+// End Body Font Size
+
+// Start Font Weight
+.tj__fw-100{
+    font-weight: var(--tj__fw-thin);
+}
+.tj__fw-200{
+    font-weight: var(--tj__fw-elight);
+}
+.tj__fw-300{
+    font-weight: var(--tj__fw-light);
+}
+.tj__fw-400{
+    font-weight: var(--tj__fw-regular);
+}
+.tj__fw-500{
+    font-weight: var(--tj__fw-medium);
+}
+.tj__fw-600{
+    font-weight: var(--tj__fw-sbold);
+}
+.tj__fw-700{
+    font-weight: var(--tj__fw-bold);
+}
+.tj__fw-800{
+    font-weight: var(--tj__fw-ebold);
+}
+.tj__fw-900{
+    font-weight: var(--tj__fw-black);
+}
+// End Font Weight
+
+// Start Font Family
+.tj__font-primary{
+    font-family: var(--tj__primary-font);
+}
+.tj__font-secondary{
+    font-family: var(--tj__secondary-font);
+}
+// End Font Family

@@ -1,0 +1,53 @@
+// Start Week Deals Area Home 3
+.tj__week-deals-product-area-home-3{
+    @include tj__common-position-relative;
+    margin-top: -45px;
+    .tj__week-deals-product-area-home-3__banner{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 599px;
+        padding-top: 100px;
+        &__title-peragraph{
+            margin-top: 26px;
+            @include tj__screen-991{
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    .tj__week-deals-product-area-home-3__wrapper{
+        &__full-content{
+            background-color: var(--tj__theme-crime);
+            padding: 80px 40px 40px 40px;
+            border-radius: 50px;
+            @include tj__common-position-relative;
+            z-index: 1;
+            margin-top: -245px;
+            @include tj__screen-575{
+                padding: 40px;
+            }
+            &::before{
+                @include tj__common-before;
+                width: calc(100% - 80px);
+                height: 5px;
+                background-color: var(--tj__theme-secondary-color);
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top-left-radius: 80px;
+                border-top-right-radius: 80px;
+                z-index: -1;
+            }
+        }
+        &__inner{
+            @include tj__flex-items-center;
+            gap: 24px;
+            @include tj__screen-1299{
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+// End Week Deals Area Home 3

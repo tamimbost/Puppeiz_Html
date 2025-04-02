@@ -1,0 +1,230 @@
+// Start Swiper Slider Arrow
+.tj__swiper-arrow-wrapper{
+    &.tj__team-area-home-1-arrow{
+        @include tj__flex-between;
+        top: -40%;
+        z-index: 1;
+        @include tj__common-position-relative;
+        &.tj__popular-product-home-3-arrow{
+            top: -260px;
+            @include tj__screen-1299{
+                top: unset;
+            }
+        }
+        @include tj__screen-1299{
+            top: unset;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .tj__swiper-next-arrow{
+            left: -105px;
+            @include tj__screen-1399{
+                left: -50px;
+            }
+            @include tj__screen-1299{
+                left: unset;
+            }
+        }
+        .tj__swiper-prev-arrow{
+            right: -105px;
+            @include tj__screen-1399{
+                right: -50px;
+            }
+            @include tj__screen-1299{
+                right: unset;
+            }
+        }
+    }
+    &.tj__testimonial-area-home-1-arrow{
+        @include tj__common-position-relative;
+        gap: 12px;
+        @include tj__flex-items-center;
+        justify-content: end;
+        right: 175px;
+        top: -60px;
+        z-index: 1;
+        @media (max-width:1599px){
+            right: 30px;
+        }
+        @include tj__screen-1199{
+            top: 0;
+            right: unset;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    }
+    &.tj__about-area-home-2-arrow{
+        @include tj__flex-between;
+        position: relative;
+        top: -50%;
+        @include tj__screen-1299{
+            top: unset;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        .tj__swiper-next-arrow{
+            @include tj__common-position-relative;
+            left: -120px;
+            @include tj__screen-1399{
+                left: -50px;
+            }
+            @include tj__screen-1299{
+                left: unset;
+            }
+        }
+        .tj__swiper-prev-arrow{
+            @include tj__common-position-relative;
+            right: -120px;
+            @include tj__screen-1399{
+                right: -50px;
+            }
+            @include tj__screen-1299{
+                right: unset;
+            }
+        }
+    }
+    &.tj__project-area-home-2-arrow{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include tj__screen-767{
+            position: absolute;
+            bottom: -75px;
+            width: 100%;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        &.tj__trending-product-home-3-arrow{
+            @include tj__screen-767{
+                // bottom: 75px;
+            }
+        }
+    }
+    &.tj__testimonial-area-home-2-arrow{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        bottom: 1px;
+        z-index: 1;
+        @include tj__screen-1199{
+            bottom: 0;
+            position: unset;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 100px;
+            left: 50%;
+        }
+        .tj__swiper-next-arrow,
+        .tj__swiper-prev-arrow{
+            width: 100px;
+            height: 100px;
+            line-height: 115px;
+            border-radius: unset;
+            left: 1px;
+            i{
+                font-size: 30px;
+            }
+            &.tj__swiper-prev-arrow{
+                right: 1px;
+            }
+        }
+    }
+    &.tj__testimonial-home-3-arrow{
+        @include tj__flex-between;
+        @include tj__common-position-absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 1;
+        @include tj__screen-991{
+            @include tj__flex-items-center;
+            gap: 15px;
+            @include tj__common-position-relative;
+            top: unset;
+            transform: unset;
+            margin-top: 30px;
+        }
+    }
+    .tj__swiper-next-arrow,
+    .tj__swiper-prev-arrow{
+        width: 46px;
+        height: 46px;
+        line-height: 52px;
+        border-radius: 50%;
+        background-color: var( --tj__theme-secondary-color);
+        @include tj__common-trans;
+        color: var(--tj__primary-color);
+        display: inline-block;
+        text-align: center;
+        @include tj__common-position-relative;
+        &:hover{
+            background-color: var(--tj__theme-primary-color);
+        }
+    }
+}
+// End Swiper Slider Arrow
+
+// Start Swiper Slider Number
+.tj__testimonial-home-two-paiganation{
+    @include tj__common-position-absolute;
+    bottom: 120px;
+    z-index: 1;
+    width: max-content;
+    left: 94%;
+    @include tj__screen-1199{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .swiper-pagination-current{
+        color: var(--tj__theme-msu-green);
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 74px;
+        font-family: var(--tj__secondary-font);
+    }
+    .swiper-pagination-total{
+        font-family: var(--tj__secondary-font);
+        color: var(--tj__theme-msu-green);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+}
+// End Swiper Slider Number 
+
+// Start Swiper Pagination Slider
+.tj__home-three-hero-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    z-index: 999;
+    gap: 10px;
+    left: 40px !important;
+    bottom: 35px !important;
+    .swiper-pagination-bullet{
+        background-color: var(--tj__theme-primary-color);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        opacity: 1;
+        &.swiper-pagination-bullet-active{
+            @include tj__common-position-relative;
+            &::before{
+                @include tj__common-before;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color:transparent;
+                border: 1px solid var(--tj__theme-primary-color);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+// End Swiper Pagination Slider

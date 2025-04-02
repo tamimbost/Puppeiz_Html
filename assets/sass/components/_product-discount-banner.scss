@@ -1,0 +1,24 @@
+// Start Product Discount Banner 
+.tj__product-discount-banner{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 429px;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-top: 50px;
+    width: 287px;
+    &.tj__product-discount-banner-trending-home-3{
+        height: 515px;
+    }
+    &__discount-text{
+        font-family: var(--tj__secondary-font);
+    }
+    &__title{
+        margin-top: 12px;
+    }
+    &__button{
+        margin-top: 30px;
+    }
+}
+// End Product Discount Banner

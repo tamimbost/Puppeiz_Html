@@ -1,0 +1,42 @@
+// Start Count Down 
+.tj__countdown{
+    @include tj__flex-items-center;
+    gap: 20px;
+    @include tj__common-position-absolute;
+    top: -40px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    @include tj__screen-575{
+        @include tj__common-position-relative;
+        flex-wrap: wrap;
+        top: 0;
+        margin-bottom: 30px;
+    }
+    .tj__countdown-box{
+        background-color: var(--tj__theme-primary-color);
+        border-radius: 30px;
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        @include tj__flex-items-center;
+        flex-direction: column;
+        .tj__countdown-degit{
+            color: var(--tj__primary-color);
+            font-size: var(--tj__fs-h4);
+            line-height: var(--tj__lg-h4);
+            font-weight: var(--tj__fw-sbold);
+            font-family: var(--tj__secondary-font);
+            display: block;
+            text-align: center;
+        }
+        .tj__countdown-text{
+            color: var(--tj__primary-color);
+            font-family: var(--tj__secondary-font);
+            display: block;
+            text-align: center;
+            font-size: var(--tj__fs-pg3);
+        }
+    }
+}
+// End Count Down
