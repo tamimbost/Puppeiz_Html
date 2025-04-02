@@ -18,15 +18,15 @@ Puppiez is a **modern and pixel-perfect** HTML template for pet shops, pet groom
 
 ## 📁 Folder Structure
 
-📂 puppiez-html-template
-│-- 📂 assets
-│   │-- 📂 css (Compiled styles)
-│   │-- 📂 scss (SCSS source files)
-│   │-- 📂 js (JavaScript & jQuery files)
-│   │-- 📂 images (Template images)
-│-- 📂 pages (All individual HTML pages)
-│-- index.html (Homepage)
-│-- README.md (This file)
+📂 **puppiez-html-template**  
+│-- 📂 **assets**  
+│   │-- 📂 **css** (Compiled styles)  
+│   │-- 📂 **scss** (SCSS source files)  
+│   │-- 📂 **js** (JavaScript & jQuery files)  
+│   │-- 📂 **images** (Template images)  
+│-- 📂 **pages** (All individual HTML pages)  
+│-- **index.html** (Homepage)  
+│-- **README.md** (This file)
 
 ## 📜 How to Use
 
