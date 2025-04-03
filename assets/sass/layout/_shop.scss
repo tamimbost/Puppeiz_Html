@@ -14,16 +14,21 @@
                 width: calc(80% - 15px);
             }
             @include tj__screen-1199{
-                width: calc(55% - 15px);
+                width: calc(50% - 15px);
             }
             @include tj__screen-991{
                 margin-left: auto;
                 margin-right: auto;
-                width: 70%;
+                width: 65%;
                 margin-top: 60px;
             }
             @include tj__screen-767{
                 width: 100%;
+            }
+            &.tj__right-sitebar{
+                @include tj__screen-991{
+                    margin-bottom: 60px;
+                }
             }
         }
     }
