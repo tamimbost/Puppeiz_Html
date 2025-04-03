@@ -1,0 +1,186 @@
+// Start Shop Sitebar
+.tj__shop-sidebar{
+    width: calc(30% - 15px);
+    @include tj__screen-991{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include tj__screen-767{
+        width: 100%;
+    }
+    .widget{
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 24px;
+        }
+        &__heading{
+            padding-bottom: 17px;
+            border-bottom: 1px dashed var(--tj__border-color);
+        }
+        &__categories{
+            margin-top: 25px;
+            ul{
+                li{
+                    @include tj__flex-between;
+                    margin-bottom: 8px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    &:hover{
+                        a, span{
+                            color: var(--tj__theme-primary-color);
+                            svg{
+                                path{
+                                    fill:var(--tj__theme-primary-color);
+                                }
+                            }
+                        }
+                    }
+                    a, span{
+                        font-size: var(--tj__fs-pg3);
+                        line-height: var(--tj__lg-pg-body);
+                        @include tj__common-trans;
+                        svg{
+                            @include tj__common-position-relative;
+                            top: -2px;
+                            margin-right: 5px;
+                            path{
+                                @include tj__common-trans;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(3){
+            .widget__categories{
+                ul{
+                    li{
+                        &:hover{
+                            a{
+                                color: var(--tj__theme-primary-color);
+                                svg{
+                                    path{
+                                        fill:var(--tj__theme-primary-color);
+                                    }
+                                }
+                            }
+                            span{
+                                color: var(--tj__theme-gray);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__products{
+            margin-top: 15px;
+            ul{
+                .side-product{
+                    @include tj__flex-items-center;
+                    justify-content: start;
+                    gap: 20px;
+                    &__img{
+                        background-color: var(--tj__theme-crime);
+                        width: 67px;
+                        height: 61px;
+                        @include tj__flex-items-center;
+                    }
+                    &__body{
+                        .star-rating{
+                            overflow: hidden;
+                            @include tj__common-position-relative;
+                            @include tj__flex-items-center;
+                            gap: 13px;
+                            justify-content: start;
+                            font-family: "Font Awesome 6 Pro"; 
+                            font-size: 12px;
+                            cursor: pointer;
+                            &:hover{
+                                &::before,
+                                .side-product-rating-icon{
+                                    color: var(--tj__theme-primary-color);
+                                    &::before{
+                                        color: var(--tj__theme-primary-color);
+                                    }
+                                }
+                            }
+                            &::before{
+                                content: '\f005\f005\f005\f005\f005';
+                                color: var(--tj__theme-secondary-color);
+                                float: left;
+                                letter-spacing: 3px;
+                                font-weight: 700;
+                                @include tj__common-trans;
+                            }
+                            .side-product-rating-icon{
+                                overflow: hidden;
+                                float: left;
+                                top: 0;
+                                left: 0;
+                                position: absolute;
+                                &::before{
+                                    content: '\f005\f005\f005\f005\f005';
+                                    top: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    color: var(--tj__theme-secondary-color);
+                                    letter-spacing: 3px;
+                                    font-weight: 700;
+                                    @include tj__common-trans;
+                                }
+                            }
+                            .side-product-rating-text{
+                                color: var(--tj__theme-gray);
+                                font-size: var(--tj__fs-pg3);
+                            }
+                        }
+                    }
+                    &__title{
+                        a{
+                            font-size: var(--tj__fs-pg-body);
+                            line-height: 26px;
+                            font-weight: var(--tj__fw-regular);
+                            font-family: var(--tj__primary-font);
+                            @include tj__common-trans;
+                            color: var(--tj__secondary-color);
+                        }
+                        &:hover{
+                            a{
+                                color: var(--tj__theme-primary-color);
+                            }
+                        }
+                    }
+                    &__price{
+                        color: var(--tj__theme-secondary-color);
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.tagcloud{
+    @include tj__flex-items-center;
+    justify-content: start;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    .tag-cloud-link{
+        font-size: var(--tj__fs-pg3);
+        color: var(--tj__theme-gray);
+        border: 1px solid var(--tj__border-color);
+        border-radius: 30px;
+        @include tj__common-trans;
+        padding: 0px 18px;
+        background-color: transparent;
+        &:hover{
+            background-color: var(--tj__theme-primary-color);
+            color: var(--tj__primary-color);
+            border-color: transparent;
+        }
+    }
+}
+// End Shop Sitebar
+

@@ -1,0 +1,48 @@
+// Start Shop Area With Sitebar
+.tj__shop-area-with-sitebar{
+    @include tj__common-position-relative;
+    &__wrapper{
+        @include tj__flex-items-center;
+        gap: 30px;
+        align-items: start;
+        @include tj__screen-991{
+            display: block;
+        }
+        &__item-inner{
+            width: calc(70% - 15px);
+            @include tj__screen-1299{
+                width: calc(80% - 15px);
+            }
+            @include tj__screen-1199{
+                width: calc(55% - 15px);
+            }
+            @include tj__screen-991{
+                margin-left: auto;
+                margin-right: auto;
+                width: 70%;
+                margin-top: 60px;
+            }
+            @include tj__screen-767{
+                width: 100%;
+            }
+        }
+    }
+
+    .tj__shop-item{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        @include tj__screen-1199{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+        }
+        @include tj__screen-767{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+    }
+
+}
+// End Shop Area With Sitebar

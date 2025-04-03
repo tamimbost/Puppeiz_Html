@@ -26,7 +26,110 @@
       this.productReview();
       this.productQuickView();
       this.countdownActivation();
+      this.priceRangeSlider();
     },
+
+
+    // Start Price Range Slider
+    priceRangeSlider: function () {
+      $(document).ready(function () {
+        const minHandle = $('#min-handle');
+        const maxHandle = $('#max-handle');
+        const sliderTrack = $('.slider-track');
+        const sliderRange = $('.slider-range');
+        const minPrice = $('#min-price');
+        const maxPrice = $('#max-price');
+
+        // Price range configuration
+        const minPriceValue = 0;
+        const maxPriceValue = 1000;
+        let currentMinPrice = 15;
+        let currentMaxPrice = 550;
+
+        // Initialize slider positions
+        updateSliderPositions();
+
+        // Update slider range display
+        function updateSliderRange() {
+          const minPos = (currentMinPrice - minPriceValue) / (maxPriceValue - minPriceValue) * 100;
+          const maxPos = (currentMaxPrice - minPriceValue) / (maxPriceValue - minPriceValue) * 100;
+
+          sliderRange.css({
+            'left': minPos + '%',
+            'width': (maxPos - minPos) + '%'
+          });
+        }
+
+        // Update handle positions
+        function updateSliderPositions() {
+          const minPos = (currentMinPrice - minPriceValue) / (maxPriceValue - minPriceValue) * 100;
+          const maxPos = (currentMaxPrice - minPriceValue) / (maxPriceValue - minPriceValue) * 100;
+
+          minHandle.css('left', minPos + '%');
+          maxHandle.css('left', maxPos + '%');
+
+          updateSliderRange();
+          updatePriceDisplay();
+        }
+
+        // Update price display
+        function updatePriceDisplay() {
+          minPrice.text('$' + currentMinPrice);
+          maxPrice.text('$' + currentMaxPrice);
+        }
+
+        // Handle drag functionality
+        let isDragging = false;
+        let currentHandle = null;
+
+        minHandle.mousedown(function (e) {
+          isDragging = true;
+          currentHandle = 'min';
+          e.preventDefault();
+        });
+
+        maxHandle.mousedown(function (e) {
+          isDragging = true;
+          currentHandle = 'max';
+          e.preventDefault();
+        });
+
+        $(document).mousemove(function (e) {
+          if (!isDragging) return;
+
+          const trackOffset = sliderTrack.offset().left;
+          const trackWidth = sliderTrack.width();
+          let position = (e.pageX - trackOffset) / trackWidth;
+
+          // Constrain position between 0 and 1
+          position = Math.max(0, Math.min(1, position));
+
+          // Calculate price based on position
+          const price = Math.round(minPriceValue + position * (maxPriceValue - minPriceValue));
+
+          if (currentHandle === 'min') {
+            // Ensure min handle doesn't go beyond max handle
+            if (price < currentMaxPrice) {
+              currentMinPrice = price;
+              updateSliderPositions();
+            }
+          } else if (currentHandle === 'max') {
+            // Ensure max handle doesn't go below min handle
+            if (price > currentMinPrice) {
+              currentMaxPrice = price;
+              updateSliderPositions();
+            }
+          }
+        });
+
+        $(document).mouseup(function () {
+          isDragging = false;
+          currentHandle = null;
+        });
+
+      });
+    },
+    // End Price Range Slider
 
     // Start Count Down Activation
     countdownActivation: function () {

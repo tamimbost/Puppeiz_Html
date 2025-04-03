@@ -1,0 +1,33 @@
+.tj__pagination{
+    margin-top: 55px;
+    ul{
+        li{
+            @include tj__flex-items-center;
+            justify-content: start;
+            gap: 12px;
+            @include tj__screen-767{
+                justify-content: center;
+            }
+            a{
+                border: 1px solid var(--tj__border-color);
+                background-color: transparent;
+                width: 40px;
+                height: 41px;
+                line-height: 41px;
+                display: inline-block;
+                text-align: center;
+                @include tj__common-trans;
+                &:hover{
+                    background-color: var(--tj__theme-primary-color);
+                    color: var(--tj__primary-color);
+                    border-color: transparent;
+                }
+                &.tj__pagination__next-btn{
+                    width: unset;
+                    height: unset;
+                    padding:0px 20px;
+                }
+            }
+        }
+    }
+}
