@@ -27,8 +27,34 @@
       this.productQuickView();
       this.countdownActivation();
       this.priceRangeSlider();
+      this.faqActivation();
     },
 
+    // Start Faq Activation
+    faqActivation: function (){
+      $(document).ready(function() {
+        let firstItem = $('.tj__accordion-item:first-child .tj__accordion-content');
+        let firstIcon = $('.tj__accordion-item:first-child .tj__accordion-header i');
+        firstItem.show();
+        firstIcon.removeClass('fa-eye').addClass('fa-eye-slash').addClass('active-icon');
+        
+        $('.tj__accordion-header').click(function() {
+            let content = $(this).next('.tj__accordion-content');
+            let icon = $(this).find('i');
+            
+            if (content.is(':visible')) {
+                content.slideUp();
+                icon.removeClass('fa-eye-slash active-icon').addClass('fa-eye').css('color', '#FE750B');
+            } else {
+                $('.tj__accordion-content').slideUp();
+                $('.tj__accordion-header i').removeClass('fa-eye-slash active-icon').addClass('fa-eye').css('color', 'orange');
+                content.slideDown();
+                icon.removeClass('fa-eye').addClass('fa-eye-slash active-icon').css('color', '#747373');
+            }
+        });
+    });
+    },
+    // End Faq Activation
 
     // Start Price Range Slider
     priceRangeSlider: function () {
